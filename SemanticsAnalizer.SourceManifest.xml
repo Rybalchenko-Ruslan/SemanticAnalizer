@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Ноутбук\Documents\Visual Studio 2013\Projects\SemanticsAnalizer\SemanticsAnalizer\obj\Local\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Users\Ноутбук\Documents\Visual Studio 2013\Projects\SemanticsAnalizer\SemanticsAnalizer\obj\Local\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Ноутбук\Documents\Visual Studio 2013\Projects\SemanticsAnalizer\SemanticsAnalizer\obj\Local\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

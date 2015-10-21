@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+    <title>Test text</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="SemanticAnalizer.js"></script>
+    <script src="app.js"></script>
+    <script src="localApp.js"></script>
+    <script src="data.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var app = new App();
+            app.initLocal(data);
+            app.start('#start');
+            app.addNew('#addNew');
+        });
+    </script>
+    <link href="app.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="content"></div>
+    <div class="panel">
+        <input id="start" type="button" value="Start analize" />
+        <input id="addNew" type="button" value="+" />
+    </div>
+</body>
+</html>

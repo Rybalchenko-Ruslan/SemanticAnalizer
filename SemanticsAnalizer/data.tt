@@ -1,0 +1,27 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".js" #>
+<# 
+	string types = string.Empty;
+	using (StreamReader sr = new StreamReader(this.Host.ResolvePath("type.json")))
+	{
+		types = sr.ReadToEnd();
+    }
+	string semantic = string.Empty;
+	using (StreamReader sr = new StreamReader(this.Host.ResolvePath("semantic.json")))
+	{
+		semantic = sr.ReadToEnd();
+    }
+	string preset = string.Empty;
+	using (StreamReader sr = new StreamReader(this.Host.ResolvePath("preset.json")))
+	{
+		preset = sr.ReadToEnd();
+    }
+ #>
+var data = {
+	"types" : <#= types #>,
+	"semantic" : <#= semantic #>,
+	"preset" : <#= preset #>
+}
