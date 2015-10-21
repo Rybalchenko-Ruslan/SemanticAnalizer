@@ -194,3 +194,8 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+SemanticsAnalizer/app.js
+SemanticsAnalizer/app.js.map
+SemanticsAnalizer/SemanticAnalizer.js
+SemanticsAnalizer/SemanticAnalizer.js.map
+test/test.zip
