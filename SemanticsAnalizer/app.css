@@ -6,13 +6,13 @@ span {
     font-style: italic;
 }
 b {
-    border: 1px solid red;
+    border: 1px solid #f00;
 }
 
 .edit {
     width: 100%;
     min-height: 1em;
-    border: 1px solid black;
+    border: 1px solid #000;
     background-color:white;
 }
 
@@ -23,7 +23,7 @@ b {
     margin: 5px;
     padding: 5px;
     border: black dotted;
-    background-color:whitesmoke;
+    background-color: #dddcb9;
 }
 #content {
     padding-bottom: 1em;
