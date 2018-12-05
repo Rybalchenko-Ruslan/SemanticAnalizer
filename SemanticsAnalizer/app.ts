@@ -32,7 +32,7 @@ class App {
     }
 
     private insert(question: Question = undefined) {
-        var $root = $("<div>", { "class": "semantic", "id": "num" + $(".semantic").length });
+        var $root = $("<div>", { "class": "semantic", "id": "num" + $(".semantic").length, "data-type": question.type });
         $root.append($("<a href='#'>X</a>").addClass("close"));
         $root.append($("<div>", { "html": "Question" }))
             .append($("<div>", { "contenteditable": "true", "class": "edit question", "html": (!question ? "" : question.question) }))
@@ -73,19 +73,30 @@ class App {
 
     private analize() {
         var app = this;
-        $(".semantic").each((i,a) => {
+        var allSemantics = Array<SemanticAnalizer.ModelData>()
+        $(".semantic").each((i, a) => {
             var quest = $(a).children(".question").first();
             var ans = $(a).children(".answer").first();
+            var type = $(a).data("type")
             if (!ans.text()) return;
             var result = app.analizer.analize({
                 answer: ans.text(),
                 question: quest.text()
             });
             if (!result) return;
+            var funcs = app.types.filter(t => t.ID == type)
+            if (funcs.length == 1)
+                allSemantics.push({
+                    func: funcs[0],
+                    semantic: result
+                })
             ans.html(app.printSemantic(ans.html(), result));
             app.titleReassign();
             $(a).children(".result").first().html(app.count(result));
         });
+        var helper = new SemanticAnalizer.ModelAHelper(this.types)
+        var hipothesis = helper.createHypothesis(allSemantics)
+        console.log(hipothesis)
     }
 
     private count(sem: SemanticAnalizer.SemanticWords): string {

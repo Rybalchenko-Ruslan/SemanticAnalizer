@@ -3,6 +3,9 @@
         ID: string;
         Name: string;
         Icon: string;
+        logic_ethic: number;
+        sensoric_intuition: number;
+        version: number;
     }
     export class SemanticWords {
         [func: string]: string[];
@@ -101,7 +104,7 @@
 
         constructor(groups: Semantic) {
             this.semantic = groups;
-            this.separators = /\s+|\?|,|\.|<([^<^>]*)>/gm;
+            this.separators = /\s+|\?|,|\.|<([^<^>]*)>|\(|\)/gm;
         }
 
         compile(): SemanticAnalizer {

@@ -1,43 +1,67 @@
 ﻿[
-    {
-        "ID": "bl",
-        "Name": "Деловая логика",
-        "Icon": "■"
-    },
-    {
-        "ID": "wl",
-        "Name": "Структурная логика",
-        "Icon": "□"
-    },
-    {
-        "ID": "be",
-        "Name": "Этика эмоций",
-        "Icon": "☻"
-    },
-    {
-        "ID": "we",
-        "Name": "Этика отношений",
-        "Icon": "☺"
-    },
-    {
-        "ID": "bs",
-        "Name": "Волевая сенсорика",
-        "Icon": "●"
-    },
-    {
-        "ID": "ws",
-        "Name": "Сенсорика ощищений",
-        "Icon": "○"
-    },
+  {
+    "ID": "bl",
+    "Name": "Деловая логика",
+    "Icon": "■",
+    "logic_ethic": 1,
+    "sensoric_intuition": 0,
+    "version": 1
+  },
+  {
+    "ID": "wl",
+    "Name": "Структурная логика",
+    "Icon": "□",
+    "logic_ethic": 1,
+    "sensoric_intuition": 0,
+    "version": -1
+  },
+  {
+    "ID": "be",
+    "Name": "Этика эмоций",
+    "Icon": "☻",
+    "logic_ethic": -1,
+    "sensoric_intuition": 0,
+    "version": 1
+  },
+  {
+    "ID": "we",
+    "Name": "Этика отношений",
+    "Icon": "☺",
+    "logic_ethic": -1,
+    "sensoric_intuition": 0,
+    "version": -1
+  },
+  {
+    "ID": "bs",
+    "Name": "Волевая сенсорика",
+    "Icon": "●",
+    "logic_ethic": 0,
+    "sensoric_intuition": 1,
+    "version": 1
+  },
+  {
+    "ID": "ws",
+    "Name": "Сенсорика ощищений",
+    "Icon": "○",
+    "logic_ethic": 0,
+    "sensoric_intuition": 1,
+    "version": -1
+  },
 
-    {
-        "ID": "bi",
-        "Name": "Интуиция возможностей",
-        "Icon": "▲"
-    },
-    {
-        "ID": "wi",
-        "Name": "Интуиция времени",
-        "Icon": "Δ"
-    }
+  {
+    "ID": "bi",
+    "Name": "Интуиция возможностей",
+    "Icon": "▲",
+    "logic_ethic": 0,
+    "sensoric_intuition": -1,
+    "version": 1
+  },
+  {
+    "ID": "wi",
+    "Name": "Интуиция времени",
+    "Icon": "Δ",
+    "logic_ethic": 0,
+    "sensoric_intuition": -1,
+    "version": -1
+  }
 ]
